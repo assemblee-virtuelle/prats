@@ -91,7 +91,7 @@ class ProposalType extends SemanticFormType
                 [
                     'required'  => false,
                     'rdfType'   => semappsConfig::URI_SKOS_CONCEPT,
-                    'graphUri'   => 'urn://semapps/thesaurus/proposaltype',
+                    'graphUri'   => 'urn://prats/thesaurus/proposaltype',
                 ]
             )
         ;

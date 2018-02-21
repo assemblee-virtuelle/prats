@@ -219,7 +219,7 @@ class OrganizationType extends SemanticFormType
                 [
                     'required'  => false,
                     'rdfType'   => semappsConfig::URI_SKOS_CONCEPT,
-                    'graphUri'   => 'urn://semapps/thesaurus/organizationtype',
+                    'graphUri'   => 'urn://prats/thesaurus/organizationtype',
                 ]
             )
         ;

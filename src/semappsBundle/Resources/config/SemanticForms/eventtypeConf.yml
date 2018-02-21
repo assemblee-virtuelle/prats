@@ -3,7 +3,7 @@ parameters:
     eventtypeConf:
       type: 'http://www.w3.org/2004/02/skos/core#Concept'
       spec: 'http://assemblee-virtuelle.github.io/mmmfest/semapps-form.ttl#form-ThesaurusType'
-      graphuri: 'urn://semapps/thesaurus/eventtype'
+      graphuri: 'urn://prats/thesaurus/eventtype'
       nameType: 'eventType'
       fields:
         http://www.w3.org/2004/02/skos/core#prefLabel:

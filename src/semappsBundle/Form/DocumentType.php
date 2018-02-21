@@ -74,7 +74,7 @@ class DocumentType extends SemanticFormType
                 [
                     'required'  => false,
                     'rdfType'   => semappsConfig::URI_SKOS_CONCEPT,
-                    'graphUri'   => 'urn://semapps/thesaurus/documenttype',
+                    'graphUri'   => 'urn://prats/thesaurus/documenttype',
                 ]
             )
             ->add(

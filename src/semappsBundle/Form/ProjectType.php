@@ -152,7 +152,7 @@ class ProjectType extends SemanticFormType
                 [
                     'required'  => false,
                     'rdfType'   => semappsConfig::URI_SKOS_CONCEPT,
-                    'graphUri'   => 'urn://semapps/thesaurus/projecttype',
+                    'graphUri'   => 'urn://prats/thesaurus/projecttype',
                 ]
             )
         ;

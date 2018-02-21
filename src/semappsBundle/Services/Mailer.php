@@ -63,7 +63,7 @@ class Mailer
         $content = [];
         switch ($type){
             case self::TYPE_RESPONSIBLE :
-                $content['subject'] = "Bienvenue sur la plateforme SemApps !";
+                $content['subject'] = "Bienvenue sur la plateforme Prats'Enr !";
                 $content['body'] = "Bonjour ".$user->getUsername()." ! <br><br>
                         Bienvenue sur ".$this->address." <br><br>
                         Pour valider ton inscription, il te suffit de cliquer sur le lien ci-dessous : <br>".$url."<br>
@@ -81,12 +81,12 @@ class Mailer
                        
                        A très bientôt :-)
                        ";
-                $content['body'] .= "A très bientôt sur SemApps :-)";
+                $content['body'] .= "A très bientôt sur Prats'Enr :-)";
                 break;
             case self::TYPE_USER :
-                $content['subject'] = "Bienvenue sur la plateforme SemApps !";
+                $content['subject'] = "Bienvenue sur la plateforme Prats'Enr !";
                 $content['body'] = "Bonjour ".$user->getUsername()." ! <br><br>
-                        Nous te souhaitons la bienvenue sur la plateforme SemApps !   ".$this->address." <br><br>
+                        Nous te souhaitons la bienvenue sur la plateforme Prats'Enr !   ".$this->address." <br><br>
                         
                         Pour t’inscrire au festival, il te suffit de cliquer sur le lien ci-dessous : <br>".$url."<br>
                         (Ce lien ne peut être utilisé qu'une seule fois, il sert à valider votre compte.)<br><br>
@@ -101,7 +101,7 @@ class Mailer
                        ";
                 break;
             default:
-                $content['subject'] = "[NOTIF] Cartographie SemApps : Demande de création de compte !";
+                $content['subject'] = "[NOTIF] Cartographie Prats'Enr : Demande de création de compte !";
                 $content['body'] = "Un nouvel utilisateur demande l'accès à l'application !</br></br>
                                   
                                     Email : ".$user->getEmail()."<br>

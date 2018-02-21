@@ -3,7 +3,7 @@ parameters:
     projecttypeConf:
       type: 'http://www.w3.org/2004/02/skos/core#Concept'
       spec: 'http://assemblee-virtuelle.github.io/mmmfest/semapps-form.ttl#form-ThesaurusType'
-      graphuri: 'urn://semapps/thesaurus/projecttype'
+      graphuri: 'urn://prats/thesaurus/projecttype'
       nameType: 'projectType'
       fields:
         http://www.w3.org/2004/02/skos/core#prefLabel:

@@ -164,7 +164,7 @@ class EventType extends SemanticFormType
                 [
                     'required'  => false,
                     'rdfType'   => semappsConfig::URI_SKOS_CONCEPT,
-                    'graphUri'   => 'urn://semapps/thesaurus/eventtype',
+                    'graphUri'   => 'urn://prats/thesaurus/eventtype',
                 ]
             )
         ;
