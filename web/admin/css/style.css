@@ -9,7 +9,7 @@
   src: url("/common/fonts/patrickhands/PatrickHandSC-Regular.ttf"); }
 
 .btn-primary-lgv {
-  background: #28ccfb;
+  background: #348D52;
   border-radius: 0; }
 
 .table tbody tr td.padded-value {
@@ -17,11 +17,11 @@
 
 .panel-gv {
   background: #F0F0F0;
-  color: #65767B; }
+  color: #1C1D20; }
 
 .logo-circle {
   position: absolute;
-  background: #28ccfb;
+  background: #FFF;
   border-radius: 1000px;
   z-index: 100;
   width: 110px;
@@ -43,11 +43,11 @@
   font-family: Quicksand; }
 
 a {
-  color: #07c3f8; }
+  color: #1C753A; }
 
 a:hover {
   text-decoration: none;
-  color: #069cc6;
+  color: #124c26;
   animation: aHover 3s forwards; }
 
 @keyframes aHover {
@@ -59,7 +59,7 @@ a:hover {
     text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1); } }
 
 header {
-  background: #28ccfb;
+  background: #348D52;
   min-height: 60px; }
   header .semapps-logo-mini-inner {
     width: 100px;
@@ -87,7 +87,7 @@ footer {
     letter-spacing: normal;
     font-size: 18px; }
     footer .about-av a {
-      color: #28ccfb; }
+      color: #348D52; }
 
 h2, label, input[type=submit] {
   font-family: petitevoisine, sans-serif; }
@@ -98,12 +98,12 @@ h1 {
 h2 {
   font-size: 18px;
   font-weight: normal;
-  color: #65767B;
+  color: #1C1D20;
   border-bottom: 2px dashed #EEE; }
 
 label {
   font-family: petitevoisine, sans-serif;
-  color: #65767B;
+  color: #1C1D20;
   font-weight: normal;
   margin: 15px 0 3px 0; }
 
@@ -112,7 +112,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   color: #FFF;
-  background: #07c3f8; }
+  background: #1C753A; }
 
 input.form-control {
   border-radius: 0; }
@@ -214,10 +214,10 @@ input.form-control {
 
 .page-header {
   font-family: petitevoisine, sans-serif;
-  border-bottom: 4px dashed #28ccfb;
-  color: #65767B; }
+  border-bottom: 4px dashed #348D52;
+  color: #1C1D20; }
   .page-header .glyphicon {
-    color: #28ccfb; }
+    color: #348D52; }
 
 .page-content {
   min-height: 60vh; }
@@ -236,12 +236,12 @@ input.form-control {
 .navbar-default .navbar-nav > .main {
   background: #F0F0F0;
   padding: 5px 15px;
-  color: #65767B; }
+  color: #1C1D20; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
   box-shadow: none;
-  background: #bcef5b;
-  color: #65767B; }
+  background: #E98B7A;
+  color: #1C1D20; }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   background: #F5F5F5; }
@@ -252,12 +252,12 @@ input.form-control {
   .nav-tabs li.active a .glyphicon,
   .nav-tabs li a .glyphicon {
     margin-right: 8px;
-    color: #bcef5b; }
+    color: #E98B7A; }
 
 .list {
-  color: #28ccfb; }
+  color: #348D52; }
   .list li span {
-    color: #65767B; }
+    color: #1C1D20; }
 
 .alert-bobby {
   background: url("../../common/images/bobby-min.png") no-repeat center top;
@@ -343,7 +343,7 @@ input.form-control {
   margin-bottom: 5px;
   margin-right: 5px; }
   .select2-tags .tags .tag {
-    background: #bcef5b;
+    background: #E98B7A;
     padding: 5px 11px;
     display: block;
     float: left;

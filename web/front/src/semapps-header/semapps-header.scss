@@ -14,7 +14,9 @@ header {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
   position: fixed;
   z-index: 1000;
-
+  .logo-circle{
+    background-color: #FFF;
+  }
   .search {
     margin-top: 10px;
     margin-bottom: 10px;

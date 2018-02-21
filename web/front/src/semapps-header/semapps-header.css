@@ -9,7 +9,7 @@
   src: url("/common/fonts/patrickhands/PatrickHandSC-Regular.ttf"); }
 
 .btn-primary-lgv {
-  background: #28ccfb;
+  background: #348D52;
   border-radius: 0; }
 
 .table tbody tr td.padded-value {
@@ -17,11 +17,11 @@
 
 .panel-gv {
   background: #F0F0F0;
-  color: #65767B; }
+  color: #1C1D20; }
 
 .logo-circle {
   position: absolute;
-  background: #28ccfb;
+  background: #FFF;
   border-radius: 1000px;
   z-index: 100;
   width: 110px;
@@ -37,7 +37,7 @@
 
 header {
   animation: headerFadeIn 0.5s cubic-bezier(0.8, 0, 0.3, 0.9) forwards;
-  background-color: #28ccfb;
+  background-color: #348D52;
   padding: 1.5px 20px;
   top: 0;
   left: 0;
@@ -51,6 +51,8 @@ header {
     top: -200px; }
   100% {
     top: 0; } }
+  header .logo-circle {
+    background-color: #FFF; }
   header .search {
     margin-top: 10px;
     margin-bottom: 10px; }
@@ -66,15 +68,15 @@ header {
     header .search .search-fields {
       width: 100%; }
     header .search #searchText {
-      border-color: #28ccfb;
+      border-color: #348D52;
       border-radius: 0; }
     header .search input[type=submit] {
-      background: #65767B;
+      background: #1C1D20;
       border: 0;
       color: #FFFFFF;
       text-shadow: none; }
     header .search input[type=submit]:hover {
-      background: #cef482; }
+      background: #FFBCB0; }
   @media (max-width: 768px) {
     header .logo-circle {
       position: initial;
@@ -122,10 +124,10 @@ body {
   width: 200px; }
 
 .dropdown > a {
-  color: #01acdd; }
+  color: #065521; }
 
 .dropdown-menu > li > a {
-  color: #01acdd; }
+  color: #065521; }
 
 .dropdown ul.dropdown-menu {
   border-radius: 4px;
