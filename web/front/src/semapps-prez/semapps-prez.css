@@ -55,14 +55,12 @@
 
 #semapps-prez .banner {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: center;
   margin: 0 auto;
   width: 85%;
-  padding-bottom: 270px;
   text-align: center; }
 
 #semapps-prez .banner-text {
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.6); }
 
 #semapps-prez .banner-text h1 {
