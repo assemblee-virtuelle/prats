@@ -2,16 +2,16 @@
   <link rel="import" type="css" href="semapps-detail-organizationType.css">
   <template>
     <div id="semapps-detail-organizationtype">
-      <div class="col col-sm-8">
+      <div class="col col-lg-8">
         <h2>[[data.properties.preferedLabel]]</h2>
         <div class="detail-header row">
-          <div class="detail-image col col-sm-4">
+          <div class="detail-image col col-lg-4">
             <template is="dom-if" if="[[representedBy]]">
               <div class="image thumbnail"
                    style$="background-image:url('[[representedBy]]');"></div>
             </template>
           </div>
-          <div class="detail-header col col-sm-8">
+          <div class="detail-header col col-lg-8">
             <table class="detailInfo">
               <template is="dom-if" if="[[alternativeLabel]]">
                 <tr class="field">
@@ -49,7 +49,7 @@
             </table>
           </div>
           <template is="dom-if" if="[[description]]">
-            <div class="detail-description col col-sm-12">
+            <div class="detail-description col col-lg-12">
               <div class="detail-description-inner">
                 <template is="juicy-html" content$="{{description}}"></template>
               </div>
@@ -57,7 +57,7 @@
           </template>
         </div>
       </div>
-      <div class="col col-sm-4 side-blocks">
+      <div class="col col-lg-4 side-blocks">
         <!-- typeOf -->
         <template is="dom-if" if="[[typeOf.organization.length]]">
           <h3>type de</h3>

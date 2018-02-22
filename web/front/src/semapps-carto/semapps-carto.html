@@ -11,8 +11,11 @@
     <div id="semapps-carto">
       <semapps-header></semapps-header>
       <semapps-prez></semapps-prez>
-      <semapps-map></semapps-map>
-      <div class="container">
+      <div class="container-fluid">
+      <div class="col-md-8">
+        <semapps-map></semapps-map>
+      </div>
+      <div class="col-md-4" style="margin-top: 65px;">
         <!-- app-location binds with the URL and produces a route for
         app-route elements to consume. Since this demo needs to run without
         server cooperation (e.g. with polyserve, in the elements catalog, etc) we'll
@@ -35,7 +38,7 @@
                              query-params="{{queryParams}}"></semapps-ressource>
         </iron-pages>
       </div>
-
+      </div>
       <!-- Overlay -->
       <!--<semapps-logo-animated></semapps-logo-animated>-->
       <footer>

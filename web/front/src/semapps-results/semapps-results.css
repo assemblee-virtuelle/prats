@@ -37,8 +37,8 @@
 .resultsTitle {
   font-family: petitevoisine, sans-serif; }
 
-@media (max-width: 768px) {
-  semapps-results-tab {
+@media (max-width: 1000px) {
+  .semapps-results-tab {
     float: left;
     display: block;
     clear: both;

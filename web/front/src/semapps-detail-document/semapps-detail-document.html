@@ -3,16 +3,16 @@
   <link rel="import" href="../semapps-tag/semapps-tag.html">
   <template>
     <div id="semapps-detail-document">
-      <div class="col col-sm-8">
+      <div class="col col-lg-8">
         <h2>[[data.properties.preferedLabel]]</h2>
         <div class="detail-header row">
-          <div class="detail-image col col-sm-4">
+          <div class="detail-image col col-lg-4">
             <template is="dom-if" if="[[representedBy]]">
               <div class="image thumbnail"
                    style$="background-image:url('[[representedBy]]');"></div>
             </template>
           </div>
-          <div class="detail-header col col-sm-8">
+          <div class="detail-header col col-lg-8" >
             <table class="detailInfo">
               <template is="dom-if" if="[[version]]">
                 <tr class="field">
@@ -87,7 +87,7 @@
             </table>
           </div>
           <template is="dom-if" if="[[description]]">
-            <div class="detail-description col col-sm-12">
+            <div class="detail-description col col-lg-12">
               <div class="detail-description-inner">
                 <template is="juicy-html" content$="{{description}}"></template>
               </div>
@@ -95,7 +95,7 @@
           </template>
         </div>
       </div>
-      <div class="col col-sm-4 side-blocks">
+      <div class="col col-lg-4 side-blocks">
         <template is="dom-if" if="[[data.internal_document_author.person.length]]">
           <h3>Auteur ( personne )</h3>
           <div class="thumbs">

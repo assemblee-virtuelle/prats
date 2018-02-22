@@ -29,7 +29,23 @@ Polymer({
         this.globalZoom = 10;
         let maxZoom = (semapps.isAnonymous())? 12:18;
         let minZoom = 0;
+        $('#semapps-map').css({ 'height': $(window).height() });
+        $(window).on('resize', function() {
+            $('#semapps-map').css({ 'height': $(window).height() });
+            $('body').css({ 'width': $(window).width() })
+        });
+        $('.smoothscroll').on('click',function (e) {
+            e.preventDefault();
 
+            var target = this.hash,
+                $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 800, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
         this.OSM = L.map('semapps',{maxZoom: maxZoom, minZoom:minZoom}).setView([this.globalX,this.globalY], this.globalZoom);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,

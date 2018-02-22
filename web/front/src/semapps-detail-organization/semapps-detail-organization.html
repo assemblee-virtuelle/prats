@@ -2,17 +2,17 @@
   <link rel="import" type="css" href="semapps-detail-organization.css">
   <template>
     <div id="semapps-detail-organization" class="row">
-      <div class="col col-sm-8">
+      <div class="col col-lg-8">
         <h2>[[data.properties.preferedLabel]]</h2>
         <div class="detail-header row">
-          <div class="detail-image col col-sm-4">
+          <div class="detail-image col col-lg-4">
             <template is="dom-if" if="[[image]]">
               <div class="image thumbnail"
                    style$="background-image:url('[[image]]');"></div>
             </template>
 
           </div>
-          <div class="detail-header col col-sm-8">
+          <div class="detail-header col col-lg-8">
             <table class="detailInfo">
               <template is="dom-if" if="[[alternativeLabel]]">
                 <tr class="field">
@@ -82,7 +82,7 @@
             </table>
           </div>
           <template is="dom-if" if="[[description]]">
-            <div class="detail-description col col-sm-12">
+            <div class="detail-description col col-lg-12">
               <div class="detail-description-inner">
                 <template is="juicy-html" content$="{{description}}"></template>
               </div>
@@ -90,7 +90,7 @@
           </template>
         </div>
       </div>
-      <section class="col col-sm-4 side-blocks">
+      <section class="col col-lg-4 side-blocks">
         <!-- responsible -->
         <template is="dom-if" if="[[data.hasResponsible.person.length]]">
           <h3>Responsables</h3>

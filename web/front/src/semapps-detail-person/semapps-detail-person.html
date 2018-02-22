@@ -4,17 +4,17 @@
   <link rel="import" href="../semapps-tag/semapps-tag.html">
   <template>
     <div id="semapps-detail-person" >
-      <div class="col col-sm-8">
+      <div class="col col-sa-8">
         <h2>[[data.properties.firstName]] [[data.properties.lastName]]</h2>
         <div class="detail-header row">
-          <div class="detail-image col col-sm-4">
+          <div class="detail-image col col-sa-4">
             <template is="dom-if" if="[[data.properties.image]]">
               <div class="image thumbnail"
                    style$="background-image:url('[[data.properties.image]]');"></div>
             </template>
           </div>
 
-          <div class="detail-header col col-sm-8">
+          <div class="detail-header col col-sa-8">
             <table class="detailInfo">
               <template is="dom-if" if="[[comment]]">
                 <tr class="field">
@@ -81,14 +81,14 @@
           </div>
         </div>
         <template is="dom-if" if="[[description]]">
-          <div class="detail-description col col-sm-12">
+          <div class="detail-description col col-sa-12">
             <div class="detail-description-inner">
               <template is="juicy-html" content$="{{description}}"></template>
             </div>
           </div>
         </template>
       </div>
-      <div class="col col-sm-4 side-blocks">
+      <div class="col col-sa-4 side-blocks">
         <!-- hasInterest -->
         <template is="dom-if" if="[[hasInterest.length]]">
           <h3>Ses domaine(s) d'activité(s)</h3>
