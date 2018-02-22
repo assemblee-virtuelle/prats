@@ -24,16 +24,16 @@ Polymer({
 
     start() {
         "use strict";
-        this.globalX = 48.862725;
-        this.globalY = 2.287592000000018;
-        this.globalZoom = 6;
+        this.globalX = 42.403681; //48.862725;
+        this.globalY = 2.47986190000006; //2.287592000000018;
+        this.globalZoom = 10;
         let maxZoom = (semapps.isAnonymous())? 12:18;
         let minZoom = 0;
 
         this.OSM = L.map('semapps',{maxZoom: maxZoom, minZoom:minZoom}).setView([this.globalX,this.globalY], this.globalZoom);
-        L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(this.OSM);
         this.markers = L.markerClusterGroup();
         this.OSM.addLayer(this.markers) ;
