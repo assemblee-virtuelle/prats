@@ -25,3 +25,8 @@ web/cookie.txt
 /web/fake_service
 package-lock.json
 composer.lock
+**/*.min.js.map
+/web/front/src/**/*.css
+**/*.min.js
+/web/**/*.css.map
+/web/**/*.css
