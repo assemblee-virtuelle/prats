@@ -13,9 +13,6 @@ Polymer({
     semapps.goToPath('detail', {
       uri: window.encodeURIComponent(e.currentTarget.getAttribute('rel'))
     });
-  },
-    showName(e){
-      log(e.target);
   }
   });
 

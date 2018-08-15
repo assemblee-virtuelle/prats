@@ -1,6 +1,5 @@
 window.log = (m) => {
     "use strict";
-    console.log(m);
 };
 
 class CartoAdmin {

@@ -9,7 +9,7 @@ Polymer({
         pins: {
             type: Array,
             value: []
-        },
+        }
     },
 
     // Wait all HTML to be loaded.
@@ -52,12 +52,13 @@ Polymer({
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(this.OSM);
         this.markers = L.markerClusterGroup();
-        this.OSM.addLayer(this.markers) ;
+        this.OSM.addLayer(this.markers);
         this.OSM.scrollWheelZoom.disable();
         this.OSM.off('dblclick');
         this.OSM.on('dblclick', onMapClick);
         this.OSM.on('mouseover',mouseOver);
         this.OSM.on('mouseout',mouseOut);
+        //this.OSM.on('zoom', e => console.log("test", e))
         this.pinAvailaible = [];
         this.awesome= {
             "http://virtual-assembly.org/pair#Person":L.AwesomeMarkers.icon({
@@ -85,7 +86,15 @@ Polymer({
                 markerColor: 'black'
             }),
         }
+        this.domHost.setOSM(this.OSM);
+    },
 
+    getOSM(){
+        return this.properties.OSM;
+    },
+
+    getZoom(){
+        return this.OSM.getZoom();
     },
 
     /**
@@ -105,10 +114,6 @@ Polymer({
         if (this.pins.hasOwnProperty(key) && this.pinAvailaible[key]) {
             this.markers.addLayer(this.pins[key]);
             this.pinAvailaible[key] = false;
-
-        }else{
-            log("error: " + key + " is not a marker")
-            log(this.pins)
         }
 
         //this.pins[key].addTo(this.OSM);
@@ -158,14 +163,11 @@ Polymer({
      */
     pinHideAll() {
         "use strict";
-        log('start pinHideAll');
-        log(this.pins);
         for (let key in this.pins){
             if (this.pins.hasOwnProperty(key)) {
                 this.pinHide(key);
             }
         }
-        log('stop pinHideAll');
 
     },
 
@@ -186,8 +188,6 @@ Polymer({
 });
 
 function onMapClick(e) {
-    log('onMapClick');
-
     if (semapps.map.OSM.scrollWheelZoom.enabled()) {
         semapps.map.OSM.scrollWheelZoom.disable();
     }
@@ -197,7 +197,6 @@ function onMapClick(e) {
     mouseOver();
 }
 function mouseOver(e) {
-    log('mouseOver');
     let element = document.getElementById('semapps-map-black');
     if(!semapps.map.OSM.scrollWheelZoom.enabled()){
         $('#semapps-map-black').animate({ height: "100%"},'fast','linear');
@@ -210,8 +209,6 @@ function mouseOver(e) {
     }
 }
 function mouseOut(e){
-    log('mouseOut');
-
     $('#semapps-map-message').hide();
     $('#semapps-map-black').animate({ height: "0px"},'fast','linear')
 }

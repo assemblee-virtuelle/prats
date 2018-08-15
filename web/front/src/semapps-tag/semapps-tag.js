@@ -12,7 +12,6 @@ Polymer({
         SemAppsCarto.ready(() => {
             semapps.initElementGlobals(this);
         });
-        log(this.route)
         switch(this.type) {
             case 'person':
             case 'persontype':

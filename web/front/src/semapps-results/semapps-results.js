@@ -74,9 +74,8 @@ Polymer({
         if (data.prefix === '/rechercher') {
             // semapps.map.zoomGlobal();
             // Route change may be fired before init.
-            window.SemAppsCarto.ready(() => {
+            window.SemAppsCarto.ready(() => { //FIXME: N'attend pas a la fin du chargement de tout les webc, les resultats de la recherche ne chargent pas
                 let split = data.path.split('/');
-                log(split)
                 this.search(split[1]);
             });
         }
@@ -84,7 +83,7 @@ Polymer({
 
     search(term, building) {
         "use strict";
-        let filterUri = this.$searchThemeFilter.val();
+        let filterUri = this.$searchThemeFilter.val();//FIXME: lié au fixme sur SemappsCarto.ready
 
         // Term and has not changed.
         if (semapps.searchLastTerm === term &&
@@ -150,7 +149,6 @@ Polymer({
             for (let result of response.results) {
                 // Data is allowed.
                 if(semapps.entities[result.type]){
-                    // log(result.type);
                     typesCounter[result.type] = typesCounter[result.type] || 0;
                     typesCounter[result.type]++;
                     totalCounter++;
@@ -158,7 +156,6 @@ Polymer({
                     if (typeof resultTemps[result.type] === 'undefined')
                         resultTemps[result.type] = [];
                     resultTemps[result.type].push(result);
-                    // log(resultTemps);
                     if(result["address"]){
                         if( semapps.map.pins[result["uri"]] === undefined){
                             semapps.getAddressToCreatePoint(result["address"],result["title"],result["type"],result["uri"]);
