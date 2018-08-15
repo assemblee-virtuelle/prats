@@ -83,6 +83,7 @@ Polymer({
 
     search(term, building) {
         "use strict";
+
         let filterUri = this.$searchThemeFilter.val();//FIXME: lié au fixme sur SemappsCarto.ready
 
         // Term and has not changed.

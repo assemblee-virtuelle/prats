@@ -61,7 +61,8 @@ var filesJs = {
   'web/front/src/semapps-prez/semapps-prez': true,
   'web/front/src/semapps-map-pin/semapps-map-pin': true,
   'web/front/src/semapps-map-wrapper/semapps-map-wrapper': true,
-  'web/front/src/semapps-axo/semapps-axo': true
+  'web/front/src/semapps-axo/semapps-axo': true,
+  'web/front/src/semapps-detail-sensor/semapps-detail-sensor':true
 };
 
 var filesScss = {
@@ -100,7 +101,8 @@ var filesScss = {
   'web/front/src/semapps-map-pin/semapps-map-pin': true,
   'web/front/src/semapps-prez/semapps-prez': true,
   'web/front/src/semapps-map-wrapper/semapps-map-wrapper': true,
-  'web/front/src/semapps-axo/semapps-axo':true
+  'web/front/src/semapps-axo/semapps-axo':true,
+  'web/front/src/semapps-detail-sensor/semapps-detail-sensor':true
 
 };
 

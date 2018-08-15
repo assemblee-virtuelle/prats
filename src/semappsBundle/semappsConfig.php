@@ -19,6 +19,7 @@ class semappsConfig
     const URI_PAIR_PROPOSAL = 'http://virtual-assembly.org/pair#Proposal';
     const URI_PAIR_DOCUMENT = 'http://virtual-assembly.org/pair#Document';
     const URI_SKOS_CONCEPT = 'http://www.w3.org/2004/02/skos/core#Concept';
+    const URI_SOSA_SENSOR = 'https://www.w3.org/TR/vocab-ssn/#SOSASensor';
     const URI_MIXTE_PERSON_ORGANIZATION = [
         self::URI_PAIR_PERSON,
         self::URI_PAIR_ORGANIZATION,

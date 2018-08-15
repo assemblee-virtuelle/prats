@@ -132,6 +132,7 @@
                                         {{ admin.menuItem('Evénements', 'componentList', 'calendar','Référencez vos événements', menuSelected, 'MEMBER',{'componentName':'event'}) }}
                                         {{ admin.menuItem('Proposition', 'componentList', 'info-sign','Faites des propositions', menuSelected, 'MEMBER',{'componentName':'proposal'}) }}
                                         {{ admin.menuItem('Document', 'componentList', 'folder-open','référencer des documents', menuSelected, 'MEMBER',{'componentName':'document'}) }}
+                                        {{ admin.menuItem('Sensor', 'componentList', 'folder-open','référencer des documents', menuSelected, 'MEMBER',{'componentName':'sensor'}) }}
                                         {% endif %}
                                     {% if app.user.sfLink or context_manager.getContext(app.user.sfLink).contextName %}
                                     <li class="main">

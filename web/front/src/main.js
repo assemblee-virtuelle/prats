@@ -61,6 +61,13 @@
                     markerColor: '#a4de37',
                 }
                 ,
+                "https://www.w3.org/TR/vocab-ssn/#SOSASensor":{
+                    name: 'Sensor',
+                    plural: 'Sensors',
+                    icon: 'folder-open',
+                    markerColor: '#a4de37',
+                }
+                ,
                 "urn://semapps/thesaurus/documenttype":{
                     name: 'Type de document',
                     plural: 'Types de document',

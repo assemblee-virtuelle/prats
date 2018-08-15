@@ -15,6 +15,7 @@ Polymer({
     });
     // Raw values.
     $.extend(this, this.data.properties);
+    console.log('this.data :', this.data);
     this.concretizes = this.data.concretizes;
     this.needs = this.data.needs;
     this.hasInterest = this.data.hasInterest;
