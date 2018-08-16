@@ -18,9 +18,6 @@ parameters:
         http://virtual-assembly.org/pair#description:
           value: 'description'
           access: 'anonymous'
-        http://virtual-assembly.org/pair#description2:
-          value: 'description2'
-          access: 'anonymous'
         http://virtual-assembly.org/pair#comment:
           value: 'comment'
           access: 'anonymous'

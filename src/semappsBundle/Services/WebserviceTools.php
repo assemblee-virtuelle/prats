@@ -58,6 +58,7 @@ class WebserviceTools
         $typeOrganization = array_key_exists(semappsConfig::URI_PAIR_ORGANIZATION,$arrayType);
         $typePerson= array_key_exists(semappsConfig::URI_PAIR_PERSON,$arrayType);
         $typeProject= array_key_exists(semappsConfig::URI_PAIR_PROJECT,$arrayType);
+        $typeSensor = array_key_exists(semappsConfig::URI_SOSA_SENSOR, $arrayType);
         $typeEvent= array_key_exists(semappsConfig::URI_PAIR_EVENT,$arrayType);
         $typeDocument= array_key_exists(semappsConfig::URI_PAIR_DOCUMENT,$arrayType);
         $typeProposition= array_key_exists(semappsConfig::URI_PAIR_PROPOSAL,$arrayType);
@@ -125,7 +126,18 @@ class WebserviceTools
             if($term)$projectSparql->addFilter('contains( lcase(?title) , lcase("'.$term.'")) || contains( lcase(?desc)  , lcase("'.$term.'")) || contains( lcase(?address) , lcase("'.$term.'"))');
             $results = $this->sfClient->sparql($projectSparql->getQuery());
             $projects = $this->sfClient->sparqlResultsValues($results, 'uri');
-
+        }
+        $sensors = [];
+        if($type == semappsConfig::Multiple || $typeSensor ){
+            $sensorsparql = clone $sparql;
+            $sensorsparql->addSelect('?title')
+                ->addWhere('?uri','rdf:type', $sparql->formatValue(semappsConfig::URI_SOSA_SENSOR,$sparql::VALUE_TYPE_URL),'?GR')
+                ->addWhere('?uri','pair:preferedLabel','?title','?GR')
+                ->addOptional('?uri','pair:comment','?desc','?GR');
+            //->addOptional('?uri','pair:building','?building','?GR');
+            if($term)$sensorsparql->addFilter('contains( lcase(?title) , lcase("'.$term.'")) || contains( lcase(?desc)  , lcase("'.$term.'")) || contains( lcase(?address) , lcase("'.$term.'"))');
+            $results = $this->sfClient->sparql($sensorsparql->getQuery());
+            $sensors = $this->sfClient->sparqlResultsValues($results, 'uri');
         }
         $events = [];
         if(($type == semappsConfig::Multiple || $typeEvent) ){
@@ -184,7 +196,7 @@ class WebserviceTools
             $thematiques = $this->sfClient->sparqlResultsValues($results,'uri');
         }
 
-        $results = array_merge($organizations,$persons,$projects,$events,$propositions,$thematiques,$documents);
+        $results = array_merge($organizations,$persons,$projects,$events,$propositions,$thematiques,$documents, $sensors);
         return $results;
     }
 
@@ -210,6 +222,7 @@ class WebserviceTools
             case semappsConfig::URI_PAIR_PROPOSAL :
             case semappsConfig::URI_PAIR_EVENT :
             case semappsConfig::URI_PAIR_DOCUMENT :
+            case semappsConfig::URI_SOSA_SENSOR:
                 $sparql->addSelect('?label')
                     ->addWhere('?uri','pair:preferedLabel','?label','?gr');
 
@@ -327,8 +340,10 @@ class WebserviceTools
                 $output['title'] = current($properties['preferedLabel']);
                 break;
             case semappsConfig::URI_SKOS_CONCEPT:
+            case semappsConfig::URI_SOSA_SENSOR:
                 $output['title'] = current($properties['preferedLabel']);
                 break;
+            
         }
         $this->getData($properties,$propertiesWithUri,$output);
         $output['properties'] = $properties;
@@ -389,6 +404,7 @@ class WebserviceTools
                                     case semappsConfig::URI_PAIR_EVENT:
                                     case semappsConfig::URI_PAIR_PROPOSAL:
                                     case semappsConfig::URI_PAIR_DOCUMENT:
+                                    case semappsConfig::URI_SOSA_SENSOR:
                                         $result = [
                                             'uri' => $uri,
                                             'name' => ((current($component['preferedLabel'])) ? current($component['preferedLabel']) : ""),

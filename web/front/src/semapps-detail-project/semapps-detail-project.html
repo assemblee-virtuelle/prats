@@ -85,12 +85,11 @@
         <!--</template>-->
         <!-- end of concretizes -->
         <!-- managedBy -->
-        <template is="dom-if" if="[[managedBy.person.length]]">
-          <h3>Personnes responsables</h3>
+        <template is="dom-if" if="[[data.documentedBy.sensor.length]]">
+          <h3>Capteurs</h3>
           <div class="thumbs">
-            <template is="dom-repeat" items="{{managedBy.person}}">
-              <semapps-avatar image="[[item.image]]" uri="[[item.uri]]"
-                         label="[[item.name]]"></semapps-avatar>
+            <template is="dom-repeat" items="{{data.documentedBy.sensor}}">
+                <semapps-tag uri="{{ item.uri }}" route="handleClickDetail" name="{{item.name}}" type="sensor"></semapps-tag>
             </template>
           </div>
           <div class="clearfix"></div>

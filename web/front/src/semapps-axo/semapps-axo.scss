@@ -11,3 +11,18 @@ path{
 path:hover{
     fill:rgba(245, 242, 242, 0.561);
 }
+
+#semapps-axo{
+    position:relative;
+    min-width:800px;
+    margin:0 auto;
+}
+
+svg{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(190, 190, 190);
+
+}

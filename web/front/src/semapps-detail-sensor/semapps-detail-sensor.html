@@ -1,0 +1,33 @@
+<dom-module id="semapps-detail-sensor">
+    <link rel="import" type="css" href="semapps-detail-sensor.css">
+    <link rel="import" href="../semapps-tag/semapps-tag.html">
+    <template>
+        <div id="semapps-detail-sensor">
+            <div class="col col-sa-8">
+                <h2>[[data.title]]</h2>
+            </div>
+        </div>
+        <div class="col col-sa-4 side-blocks">
+            <template is="dom-if" if="[[data.documents.person.length]]">
+                <h3>Personnes</h3>
+                <div class="thumbs">
+                    <template is="dom-repeat" items="{{data.documents.person}}">
+                    <semapps-avatar image="[[item.image]]" uri="[[item.uri]]"
+                                label="[[item.name]]"></semapps-avatar>
+                    </template>
+                </div>
+                <div class="clearfix"></div>
+            </template>
+            <template is="dom-if" if="[[data.documents.project.length]]">
+                <h3>Projets</h3>
+                <div class="thumbs">
+                    <template is="dom-repeat" items="{{data.documents.project}}">
+                        <semapps-tag uri="{{ item.uri }}" route="handleClickDetail" name="{{item.name}}" type="project"></semapps-tag>
+                    </template>
+                </div>
+                <div class="clearfix"></div>
+            </template>
+        </div>
+    </template>
+<script src="semapps-detail-sensor.min.js"></script>
+</dom-module>

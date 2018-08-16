@@ -154,6 +154,7 @@ parameters:
         http://virtual-assembly.org/pair#knows: 'http://virtual-assembly.org/pair#knows'
 #        http://virtual-assembly.org/pair#memberOf: 'http://virtual-assembly.org/pair#hasMember'
         http://virtual-assembly.org/pair#involvedIn: 'http://virtual-assembly.org/pair#involves'
+        http://virtual-assembly.org/pair#documentedBy: 'http://virtual-assembly.org/pair#documents'
         http://virtual-assembly.org/pair#participantOf: 'http://virtual-assembly.org/pair#hasParticipant'
         http://virtual-assembly.org/pair#manages: "http://virtual-assembly.org/pair#managedBy"
         http://virtual-assembly.org/pair#organizes: "http://virtual-assembly.org/pair#organizedBy"

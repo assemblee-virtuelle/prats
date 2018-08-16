@@ -166,6 +166,17 @@
           <div class="clearfix"></div>
         </template>
         <!-- end of employedBy -->
+        <!-- Sensors -->
+        <template is="dom-if" if="[[data.documentedBy.sensor.length]]">
+            <h3>Capteurs</h3>
+            <div class="thumbs">
+              <template is="dom-repeat" items="{{data.documentedBy.sensor}}">
+                  <semapps-tag uri="{{ item.uri }}" route="handleClickDetail" name="{{item.name}}" type="sensors"></semapps-tag>
+              </template>
+            </div>
+            <div class="clearfix"></div>
+          </template>
+          <!-- end of knows -->
         <!-- involvedIn -->
         <template is="dom-if" if="[[data.involvedIn.project.length]]">
           <h3>Projet(s) dans le(s)quel(s) il est impliqué(s)</h3>

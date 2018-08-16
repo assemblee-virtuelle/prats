@@ -109,7 +109,7 @@ class ProjectType extends SemanticFormType
                 UriType::class,
                 [
                     'required'  => false,
-                    'rdfType'   => semappsConfig::URI_PAIR_DOCUMENT,
+                    'rdfType'   => semappsConfig::URI_PAIR_DOCUMENT."|".semappsConfig::URI_SOSA_SENSOR,
                 ]
             )
             ->add(

@@ -1,11 +1,14 @@
 #semapps-map-wrapper{
-    margin-top:60px;
+    margin:0 auto;
+    margin-top:120px;
+    margin-bottom:10px;
+    width:75%;
 }
 
 #switch-axo{
     width: fit-content;
     position: absolute;
     cursor: pointer;
-    z-index: 999999;
+    z-index: 99999;
     right: 40px;
 }

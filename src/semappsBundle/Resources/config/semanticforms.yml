@@ -9,6 +9,7 @@ imports:
     - { resource: "@semappsBundle/Resources/config/SemanticForms/projecttypeConf.yml" }
     - { resource: "@semappsBundle/Resources/config/SemanticForms/eventtypeConf.yml" }
     - { resource: "@semappsBundle/Resources/config/SemanticForms/proposaltypeConf.yml" }
+    - { resource: "@semappsBundle/Resources/config/SemanticForms/sensorConf.yml" }
     - { resource: "@semappsBundle/Resources/config/SemanticForms/organizationtypeConf.yml" }
     - { resource: "@semappsBundle/Resources/config/SemanticForms/dbpedia.yml" }
     - { resource: "@semappsBundle/Resources/config/SemanticForms/thematicConf.yml" }
@@ -20,6 +21,7 @@ parameters:
     http://virtual-assembly.org/pair#Project: 'project'
     http://virtual-assembly.org/pair#Event: 'event'
     http://virtual-assembly.org/pair#Proposal: 'proposal'
+    https://www.w3.org/TR/vocab-ssn/#SOSASensor: 'sensor'
     http://virtual-assembly.org/pair#Document: 'document'
 
   graphToName:

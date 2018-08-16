@@ -113,6 +113,15 @@ class PersonType extends SemanticFormType
             )
             ->add(
                 $builder,
+                'documentedBy',
+                UriType::class,
+                [
+                    'required'  => false,
+                    'rdfType'   => semappsConfig::URI_PAIR_DOCUMENT."|".semappsConfig::URI_SOSA_SENSOR,
+                ]
+            )
+            ->add(
+                $builder,
                 'memberOf',
                 UriType::class,
                 [

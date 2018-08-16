@@ -6,9 +6,10 @@ Polymer({
       semapps.initElementGlobals(this);
     });
     // Raw values.
+
     $.extend(this, this.data.properties);
+    console.log('this.data :', this.data);
     this.hasInterest = this.data.hasInterest;
-    this.knows = this.data.knows;
     this.affiliatedTo = this.data.affiliatedTo;
     this.responsibleOf = this.data.responsibleOf;
     this.involvedIn = this.data.involvedIn;
@@ -24,15 +25,17 @@ Polymer({
     this.hasSubject = this.data.hasSubject;
     this.skill = this.data.skill;
     this.allowUri = semapps.detail.canEdit;
-    if (semapps.isMember()){
-        this.addressTitle = this.address[0];
-    }else{
-        this.addressTitle = "";
-        let addressSplit = this.address[0].split(" ");
-        for (let i = addressSplit.length-1; i>=0 ; i--){
-            this.addressTitle= addressSplit[i]+" "+this.addressTitle;
-            if (isNaN(addressSplit[i]) ===false)
-                break;
+    if (this.address){
+        if (semapps.isMember()){
+            this.addressTitle = this.address[0];
+        }else{
+            this.addressTitle = "";
+            let addressSplit = this.address[0].split(" ");
+            for (let i = addressSplit.length-1; i>=0 ; i--){
+                this.addressTitle= addressSplit[i]+" "+this.addressTitle;
+                if (isNaN(addressSplit[i]) ===false)
+                    break;
+            }
         }
     }
 
