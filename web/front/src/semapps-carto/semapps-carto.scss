@@ -29,3 +29,24 @@ footer {
     }
   }
 }
+
+#semapps-carto{
+  display:flex;
+  flex-direction:column;
+}
+
+#semapps-body{
+  display:flex;
+  margin-top:100px;
+}
+
+semapps-map-wrapper{
+  width:66%;
+  padding-right:5px;
+  border-right:2px solid rgba(0, 0, 0, 0.08);
+}
+
+#results{
+  padding-left:5px;
+  width:33%;
+}

@@ -129,6 +129,8 @@ h3 {
 }
 
 .detail-image {
+  max-width:200px;
+  margin:0 auto;
   .image {
     background-position: center;
     background-size: cover;

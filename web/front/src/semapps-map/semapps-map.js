@@ -58,7 +58,6 @@ Polymer({
         this.OSM.on('dblclick', onMapClick);
         this.OSM.on('mouseover',mouseOver);
         this.OSM.on('mouseout',mouseOut);
-        //this.OSM.on('zoom', e => console.log("test", e))
         this.pinAvailaible = [];
         this.awesome= {
             "http://virtual-assembly.org/pair#Person":L.AwesomeMarkers.icon({
@@ -208,6 +207,7 @@ function mouseOver(e) {
         $('#semapps-map-message').hide()
     }
 }
+
 function mouseOut(e){
     $('#semapps-map-message').hide();
     $('#semapps-map-black').animate({ height: "0px"},'fast','linear')

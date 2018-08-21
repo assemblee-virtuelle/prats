@@ -51,6 +51,10 @@ li {
 
 @media (max-width: 1920px) {
   li, a {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
     span.counter {
       float: right;
     }
@@ -58,14 +62,5 @@ li {
   li.active a {
     border: 0;
     border-radius: 4px;
-  }
-}
-
-@media (max-width: 768px) {
-  li.semapps-results-tab,a.semapps-results-tab {
-    display: block;
-      float: left;
-      clear: both;
-      width: 100%;
   }
 }

@@ -14,11 +14,11 @@ Polymer({
         this.axo = this.querySelector('semapps-axo');
         this.btnAxo = this.querySelector('#switch-axo');
         this.btnImg = this.btnAxo.querySelector('img');
-        $('#semapps-map-wrapper').css({ 'height': $(window).height() });
-        $(window).on('resize', function() {
-            $('#semapps-map-wrapper').css({ 'height': $(window).height() });
-            $('body').css({ 'width': $(window).width() })
-        });
+        // $('#semapps-map-wrapper').css({ 'height': $(window).height() });
+        // $(window).on('resize', function() {
+        //     $('#semapps-map-wrapper').css({ 'height': $(window).height() });
+        //     $('body').css({ 'width': $(window).width() })
+        // });
     },
 
     axoReady(){
