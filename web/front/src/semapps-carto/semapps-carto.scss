@@ -32,6 +32,7 @@ footer {
 
 #semapps-carto{
   display:flex;
+  // return to display under the map add : flex-direction : column;
   flex-direction:column;
 }
 
@@ -41,12 +42,13 @@ footer {
 }
 
 semapps-map-wrapper{
-  width:66%;
+  width:66%; // return to display under the map remove this line
   padding-right:5px;
   border-right:0px solid rgba(0, 0, 0, 0.08);
 }
 
 #results{
   padding-left:5px;
-  width:33%;
+  width:33%;  // return to display under the map remove this line : set 80%
+  // return to display under the map add : margin: 0 auto;
 }
